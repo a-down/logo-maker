@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="200px">
   <rect x="65" y="40" width="165" height="165"/>
-  <polygon points="150, 18 244, 182 56, 182" fill="blue" />
   <circle cx="148" cy="120" r="80" fill="red"/>
+  <polygon points="150, 18 244, 182 56, 182" fill="blue" />
+  <text x="98" y="135" fill="white" font-size="44">ADD</text>
 </svg>
