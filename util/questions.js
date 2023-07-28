@@ -1,5 +1,3 @@
-const inquirer = require('inquirer');
-
 class Question {
   constructor(type, message, name) {
     this.type = type;
@@ -9,9 +7,6 @@ class Question {
   }
 }
 
-
-
-
 class List extends Question {
   constructor(type, message, name, choices) {
     super(type, message, name);
@@ -19,9 +14,9 @@ class List extends Question {
   }
 }
 
-const readyYet = new Question('confirm', 'Are you ready to create your logo?', 'readyYet');
+exports.readyYet = new Question('confirm', 'Are you ready to create your logo?', 'readyYet');
 
-questionsArr = [
+exports.questionsArr = [
   new Question('input', 'Please type up to 3 letters to display on your logo.', 'logoLetters'),
 
   new Question('input', 'Please either type a color word or type a hex code (starting with a #) to set the text color.', 'logoTextColor'),
@@ -33,3 +28,5 @@ questionsArr = [
 
 function test() { console.log(questionsArr) }
 test()
+
+
