@@ -19,6 +19,9 @@ function start() {
 function renderLogo(responses) {
   const svgContent = shapes.renderScript(responses)
   console.log(svgContent)
+  fs.writeFile('logo.svg', svgContent, (error) => {
+    error ? console.log(error) : console.log('Generated logo.svg')
+  })
 }
 
 
