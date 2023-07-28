@@ -9,6 +9,7 @@ function start() {
     .prompt(questions.questionsArr)
     .then((responses) => {
       console.log(responses)
+      shapes.renderShapes(responses)
     })
 }
 
@@ -31,18 +32,7 @@ init()
 
 
 
-// function init() {
-//   inquirer
-//     .prompt(questions.readyYet)
-//     .then((response) => {
-//       // response.status === true ? askPrompts() : 
-//       //   (console.log('Let us know when you are ready'),
-//       //   init())
-//       console.log(response)
-//     })
-//   }
 
-// init()
 
 
 // Prompts
