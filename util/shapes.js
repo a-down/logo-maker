@@ -2,7 +2,15 @@ class Shape {
   constructor(text, textColor, shapeColor) {
     this.text = text;
     this.textColor = textColor;
-    this.shapeColor = `fill="${shapeColor}"`;
+    this.shapeColor = shapeColor;
+  }
+
+  setColor(color) {
+    this.shapeColor = color;
+  }
+
+  render() {
+    return `<${this.scriptTag} ${this.positioning} fill="${this.shapeColor}" />`
   }
 }
 
@@ -31,7 +39,11 @@ class Rectangle extends Shape {
 }
 
 
-function renderShapes(responses) {
+function renderLogo(responses) {
+  switch(responses.logoShape) {
+    case 'Triangle':
+      
+  }
   
 }
 
@@ -43,5 +55,5 @@ function renderShapes(responses) {
 
 module.exports = {
   renderShapes: renderShapes,
-
+  renderLogo: renderLogo,
 }

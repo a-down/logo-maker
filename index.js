@@ -1,6 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const questions = require('./util/questions');
+const shapes = require('./util/shapes');
 
 
 
@@ -9,11 +10,23 @@ function start() {
     .prompt(questions.questionsArr)
     .then((responses) => {
       console.log(responses)
-      shapes.renderShapes(responses)
+      renderLogo(responses)
     })
 }
 
+function renderLogo() {
+  const shapeScript = shapes.renderShapes();
+  const textScript = shapes.renderText();
+  renderScript(shapeScript, textScript)
+}
 
+function renderScript(shapeScript, textScript) {
+  const newScript = 
+`<svg xmlns="http://www.w3.org/2000/svg" width="300px" height="200px">
+${shapeScript}
+${textScript}
+</svg>`
+}
 
 
 
