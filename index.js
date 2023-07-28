@@ -15,6 +15,7 @@ function start() {
       const textArr = logoLetters.split('')
       // console.log(textArr)
 
+      // confirms all prompts are answered and that 3 or fewer letters were submitted
       if (logoLetters === '' || logoTextColor === '' || logoShape === '' || logoShapeColor === '' ) {
         console.log('Please answer every prompt.')
         start()
@@ -41,6 +42,7 @@ function renderLogo(responses) {
 
 
 // called when the page opens
+// allows the user to start on command
 function init() {
   inquirer
     .prompt(questions.readyYet)

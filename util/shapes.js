@@ -50,6 +50,8 @@ class Square extends Shape {
 }
 
 
+
+
 // generates script for the logo.svg gile
 function renderScript(responses) {
   console.log(responses)
@@ -78,7 +80,6 @@ function renderScript(responses) {
 }
 
 
-
 // combines the rendered script with the <svg> script and returns it to the renderScript() function
 function renderFullScript(shapeScript, textScript) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="300px" height="200px">
@@ -86,7 +87,6 @@ ${shapeScript}
 ${textScript}
 </svg>`
 }
-
 
 
 module.exports = {

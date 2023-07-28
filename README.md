@@ -22,6 +22,7 @@ To use the Logo Maker, you will need to follow these instructions:
   ```
   npm install
   ```
+  - confirm that the `inquirer` and `jest` packages were installed and active.
 
 ## Usage
 
