@@ -4,6 +4,13 @@ const questions = require('./util/questions');
 
 
 
+function start() {
+  inquirer
+    .prompt(questions.questionsArr)
+    .then((responses) => {
+      console.log(responses)
+    })
+}
 
 
 
@@ -19,7 +26,8 @@ function init() {
       init())
     })
 }
-init();
+
+init()
 
 
 

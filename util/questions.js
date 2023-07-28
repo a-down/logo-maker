@@ -25,25 +25,25 @@ exports.readyYet = {
 exports.questionsArr = [
   {
     type: 'input',
-    input: 'Please type up to 3 letters to display on your logo.',
+    message: 'Please type up to 3 letters to display on your logo.',
     name: 'logoLetters',
     default: '',
   },
   {
     type: 'input',
-    input: 'Please either type a color word or type a hex code (starting with a #) to set the text color.',
+    message: 'Please either type a color word or type a hex code (starting with a #) to set the text color.',
     name: 'logoTextColor',
     default: '',
   },
   {
     type: 'list',
-    input: 'Please select a shape for the logo.',
+    message: 'Please select a shape for the logo.',
     name: 'logoShape',
-    options: ['Triangle', 'Square', 'Rectangle'],
+    choices: ['Triangle', 'Square', 'Rectangle'],
   },
   {
     type: 'input',
-    input: 'Please either type a color word or type a hex code (starting with a #) to set the shape color.',
+    message: 'Please either type a color word or type a hex code (starting with a #) to set the shape color.',
     name: 'logoShapeColor',
     default: '',
   },
