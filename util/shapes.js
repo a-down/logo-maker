@@ -1,3 +1,4 @@
+// parent class
 class Shape {
   constructor(text, textColor, shapeColor) {
     this.text = text;
@@ -18,6 +19,8 @@ class Shape {
   }
 }
 
+
+// child class
 class Triangle extends Shape {
   constructor(text, textColor, shapeColor) {
     super(text, textColor, shapeColor);
@@ -26,6 +29,8 @@ class Triangle extends Shape {
   }
 }
 
+
+// child class
 class Circle extends Shape {
   constructor(text, textColor, shapeColor) {
     super(text, textColor, shapeColor);
@@ -34,6 +39,8 @@ class Circle extends Shape {
   }
 }
 
+
+// child class
 class Square extends Shape {
   constructor(text, textColor, shapeColor) {
     super(text, textColor, shapeColor);
@@ -42,11 +49,14 @@ class Square extends Shape {
   }
 }
 
+
+// generates script for the logo.svg gile
 function renderScript(responses) {
   console.log(responses)
   const {logoLetters, logoTextColor, logoShape, logoShapeColor} = responses;
   console.log(logoLetters)
 
+  // constructs the shape variable/object depending on what shape the user wanted
   let shape
   switch(responses.logoShape) {
     case 'Triangle':
@@ -60,24 +70,22 @@ function renderScript(responses) {
       break;
   }
 
+  // generates script for the shape and the text separately
   const shapeScript = shape.render()
   const textScript = shape.renderText()
 
   return renderFullScript(shapeScript, textScript)
 }
 
+
+
+// combines the rendered script with the <svg> script and returns it to the renderScript() function
 function renderFullScript(shapeScript, textScript) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="300px" height="200px">
 ${shapeScript}
 ${textScript}
 </svg>`
 }
-
-
-
-
-
-
 
 
 

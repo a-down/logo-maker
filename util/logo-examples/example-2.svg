@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300px" height="200px">
+<polygon points="150, 18 244, 182 56, 182" fill="Navy" />
+<text x="98" y="135" fill="Lime" font-size="44">MIN</text>
+</svg>

@@ -1,33 +1,34 @@
+// dependencies
 const fs = require('fs');
 const inquirer = require('inquirer');
 const questions = require('./util/questions');
 const shapes = require('./util/shapes');
 
 
-
+// starts
 function start() {
   inquirer
     .prompt(questions.questionsArr)
     .then((responses) => {
-      console.log(responses)
+      // console.log(responses)
       renderLogo(responses)
     })
 }
 
 
-
+// renders logo from prompts
 function renderLogo(responses) {
   const svgContent = shapes.renderScript(responses)
-  console.log(svgContent)
+  // console.log(svgContent)
+
+  // writes the rendered script to 'logo.svg'
   fs.writeFile('logo.svg', svgContent, (error) => {
     error ? console.log(error) : console.log('Generated logo.svg')
   })
 }
 
 
-
-
-
+// called when the page opens
 function init() {
   inquirer
     .prompt(questions.readyYet)
@@ -38,7 +39,6 @@ function init() {
       init())
     })
 }
-
 init()
 
 

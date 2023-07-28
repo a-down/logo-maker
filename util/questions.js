@@ -1,19 +1,4 @@
-// function Question(type, message, name) {
-//     this.type = type;
-//     this.message = message;
-//     this.name = name;
-//     this.default = '';
-//   }
-
-// function List(type, message, name, choices) {
-//     this.type = type;
-//     this.message = message;
-//     this.name = name;
-//     this.choices = choices;
-//   }
-
-
-
+// prompt question to start the application
 exports.readyYet = {
   type: 'confirm', 
   message: 'Are you ready to create your logo?',
@@ -21,7 +6,7 @@ exports.readyYet = {
 }
 
 
-
+// prompt questions used to get the qualities for the logo
 exports.questionsArr = [
   {
     type: 'input',
