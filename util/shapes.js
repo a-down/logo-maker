@@ -12,6 +12,10 @@ class Shape {
   render() {
     return `<${this.scriptTag} ${this.positioning} fill="${this.shapeColor}" />`
   }
+
+  renderText() {
+    return `<text x="98" y="135" fill="white" font-size="44">${this.text}</text>`
+  }
 }
 
 class Triangle extends Shape {
@@ -38,29 +42,38 @@ class Square extends Shape {
   }
 }
 
-
-
-function renderShapes(responses) {
+function renderScript(responses) {
   console.log(responses)
   const {logoLetters, logoTextColor, logoShape, logoShapeColor} = responses;
-
   console.log(logoLetters)
+
+  let shape
   switch(responses.logoShape) {
     case 'Triangle':
-      return new Triangle(logoLetters, logoTextColor, logoShapeColor).render()
+      shape = new Triangle(logoLetters, logoTextColor, logoShapeColor)
       break;
     case 'Circle':
-      return new Circle(logoLetters, logoTextColor, logoShapeColor).render()
+      shape = new Circle(logoLetters, logoTextColor, logoShapeColor)
       break;
     case 'Square':
-      return new Square(logoLetters, logoTextColor, logoShapeColor).render()
+      shape = new Square(logoLetters, logoTextColor, logoShapeColor)
       break;
   }
+
+  const shapeScript = shape.render()
+  const textScript = shape.renderText()
+
+  return renderFullScript(shapeScript, textScript)
 }
 
-function renderText() {
-
+function renderFullScript(shapeScript, textScript) {
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="300px" height="200px">
+${shapeScript}
+${textScript}
+</svg>`
 }
+
+
 
 
 
@@ -69,6 +82,5 @@ function renderText() {
 
 
 module.exports = {
-  renderShapes: renderShapes,
-  renderText: renderText,
+  renderScript: renderScript
 }

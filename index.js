@@ -14,20 +14,14 @@ function start() {
     })
 }
 
+
+
 function renderLogo(responses) {
-  const shapeScript = shapes.renderShapes(responses);
-  console.log(shapeScript)
-  const textScript = shapes.renderText(responses);
-  renderScript(shapeScript, textScript)
+  const svgContent = shapes.renderScript(responses)
+  console.log(svgContent)
 }
 
-function renderScript(shapeScript, textScript) {
-  const newScript = 
-`<svg xmlns="http://www.w3.org/2000/svg" width="300px" height="200px">
-${shapeScript}
-${textScript}
-</svg>`
-}
+
 
 
 
