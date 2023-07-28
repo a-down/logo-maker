@@ -5,8 +5,8 @@ class Shape {
     this.shapeColor = shapeColor;
   }
 
-  setColor(color) {
-    this.shapeColor = color;
+  setColor(shapeColor) {
+    this.shapeColor = shapeColor;
   }
 
   render() {
@@ -47,13 +47,13 @@ function renderShapes(responses) {
   console.log(logoLetters)
   switch(responses.logoShape) {
     case 'Triangle':
-      return new Triangle(logoLetters, logoTextColor, logoShape, logoShapeColor).render()
+      return new Triangle(logoLetters, logoTextColor, logoShapeColor).render()
       break;
     case 'Circle':
-      return new Circle(logoLetters, logoTextColor, logoShape, logoShapeColor).render()
+      return new Circle(logoLetters, logoTextColor, logoShapeColor).render()
       break;
     case 'Rectangle':
-      return new Rectangle(logoLetters, logoTextColor, logoShape, logoShapeColor).render()
+      return new Rectangle(logoLetters, logoTextColor, logoShapeColor).render()
       break;
   }
 }
