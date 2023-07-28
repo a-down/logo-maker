@@ -47,13 +47,13 @@ function renderShapes(responses) {
   console.log(logoLetters)
   switch(responses.logoShape) {
     case 'Triangle':
-      return new Triangle(logoLetters, logoTextColor, logoShapeColor)
+      return new Triangle(logoLetters, logoTextColor, logoShapeColor).render()
       break;
     case 'Circle':
-      return new Circle(logoLetters, logoTextColor, logoShapeColor)
+      return new Circle(logoLetters, logoTextColor, logoShapeColor).render()
       break;
     case 'Square':
-      return new Square(logoLetters, logoTextColor, logoShapeColor)
+      return new Square(logoLetters, logoTextColor, logoShapeColor).render()
       break;
   }
 }
