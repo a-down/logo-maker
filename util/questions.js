@@ -1,16 +1,17 @@
-function Question(type, message, name) {
-    this.type = type;
-    this.message = message;
-    this.name = name;
-    this.default = '';
-  }
+// function Question(type, message, name) {
+//     this.type = type;
+//     this.message = message;
+//     this.name = name;
+//     this.default = '';
+//   }
 
-function List(type, message, name, choices) {
-    this.type = type;
-    this.message = message;
-    this.name = name;
-    this.choices = choices;
-  }
+// function List(type, message, name, choices) {
+//     this.type = type;
+//     this.message = message;
+//     this.name = name;
+//     this.choices = choices;
+//   }
+
 
 
 exports.readyYet = {
@@ -18,6 +19,7 @@ exports.readyYet = {
   message: 'Are you ready to create your logo?',
   name: 'status', 
 }
+
 
 
 exports.questionsArr = [
@@ -45,11 +47,4 @@ exports.questionsArr = [
     name: 'logoShapeColor',
     default: '',
   },
-
-
-
-
-  new Question('input', 'Please either type a color word or type a hex code (starting with a #) to set the shape color.', 'logoShapeColor'),
 ]
-
-
