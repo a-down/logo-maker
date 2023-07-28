@@ -82,5 +82,8 @@ ${textScript}
 
 
 module.exports = {
-  renderScript: renderScript
+  renderScript: renderScript,
+  Triangle: Triangle,
+  Circle: Circle,
+  Square: Square,
 }
