@@ -39,7 +39,7 @@ exports.questionsArr = [
     type: 'list',
     message: 'Please select a shape for the logo.',
     name: 'logoShape',
-    choices: ['Triangle', 'Square', 'Rectangle'],
+    choices: ['Triangle', 'Circle', 'Square'],
   },
   {
     type: 'input',

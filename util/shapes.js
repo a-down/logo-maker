@@ -30,7 +30,7 @@ class Circle extends Shape {
   }
 }
 
-class Rectangle extends Shape {
+class Square extends Shape {
   constructor(text, textColor, shapeColor) {
     super(text, textColor, shapeColor);
     this.scriptTag = 'rect';
@@ -47,13 +47,13 @@ function renderShapes(responses) {
   console.log(logoLetters)
   switch(responses.logoShape) {
     case 'Triangle':
-      return new Triangle(logoLetters, logoTextColor, logoShapeColor).render()
+      return new Triangle(logoLetters, logoTextColor, logoShapeColor)
       break;
     case 'Circle':
-      return new Circle(logoLetters, logoTextColor, logoShapeColor).render()
+      return new Circle(logoLetters, logoTextColor, logoShapeColor)
       break;
-    case 'Rectangle':
-      return new Rectangle(logoLetters, logoTextColor, logoShapeColor).render()
+    case 'Square':
+      return new Square(logoLetters, logoTextColor, logoShapeColor)
       break;
   }
 }
