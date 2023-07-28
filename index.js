@@ -11,7 +11,19 @@ function start() {
     .prompt(questions.questionsArr)
     .then((responses) => {
       // console.log(responses)
-      renderLogo(responses)
+      const {logoLetters, logoTextColor, logoShape, logoShapeColor} = responses
+      const textArr = logoLetters.split('')
+      // console.log(textArr)
+
+      if (logoLetters === '' || logoTextColor === '' || logoShape === '' || logoShapeColor === '' ) {
+        console.log('Please answer every prompt.')
+        start()
+      } else if (textArr.length > 3) {
+        console.log('Please use 3 or fewer letters.')
+        start()
+      } else {
+        renderLogo(responses)
+      }
     })
 }
 
