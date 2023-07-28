@@ -39,12 +39,27 @@ class Rectangle extends Shape {
 }
 
 
-function renderLogo(responses) {
+
+function renderShapes(responses) {
+  console.log(responses)
+  const {logoLetters, logoTextColor, logoShape, logoShapeColor} = responses;
+
+  console.log(logoLetters)
   switch(responses.logoShape) {
     case 'Triangle':
-      
+      return new Triangle(logoLetters, logoTextColor, logoShape, logoShapeColor).render()
+      break;
+    case 'Circle':
+      return new Circle(logoLetters, logoTextColor, logoShape, logoShapeColor).render()
+      break;
+    case 'Rectangle':
+      return new Rectangle(logoLetters, logoTextColor, logoShape, logoShapeColor).render()
+      break;
   }
-  
+}
+
+function renderText() {
+
 }
 
 
@@ -55,5 +70,5 @@ function renderLogo(responses) {
 
 module.exports = {
   renderShapes: renderShapes,
-  renderLogo: renderLogo,
+  renderText: renderText,
 }

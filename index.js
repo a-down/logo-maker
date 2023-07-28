@@ -14,9 +14,10 @@ function start() {
     })
 }
 
-function renderLogo() {
-  const shapeScript = shapes.renderShapes();
-  const textScript = shapes.renderText();
+function renderLogo(responses) {
+  const shapeScript = shapes.renderShapes(responses);
+  console.log(shapeScript)
+  const textScript = shapes.renderText(responses);
   renderScript(shapeScript, textScript)
 }
 
