@@ -1,32 +1,55 @@
-class Question {
-  constructor(type, message, name) {
+function Question(type, message, name) {
     this.type = type;
     this.message = message;
     this.name = name;
     this.default = '';
   }
-}
 
-class List extends Question {
-  constructor(type, message, name, choices) {
-    super(type, message, name);
+function List(type, message, name, choices) {
+    this.type = type;
+    this.message = message;
+    this.name = name;
     this.choices = choices;
   }
+
+
+exports.readyYet = {
+  type: 'confirm', 
+  message: 'Are you ready to create your logo?',
+  name: 'status', 
 }
 
-exports.readyYet = new Question('confirm', 'Are you ready to create your logo?', 'readyYet');
 
 exports.questionsArr = [
-  new Question('input', 'Please type up to 3 letters to display on your logo.', 'logoLetters'),
+  {
+    type: 'input',
+    input: 'Please type up to 3 letters to display on your logo.',
+    name: 'logoLetters',
+    default: '',
+  },
+  {
+    type: 'input',
+    input: 'Please either type a color word or type a hex code (starting with a #) to set the text color.',
+    name: 'logoTextColor',
+    default: '',
+  },
+  {
+    type: 'list',
+    input: 'Please select a shape for the logo.',
+    name: 'logoShape',
+    options: ['Triangle', 'Square', 'Rectangle'],
+  },
+  {
+    type: 'input',
+    input: 'Please either type a color word or type a hex code (starting with a #) to set the shape color.',
+    name: 'logoShapeColor',
+    default: '',
+  },
 
-  new Question('input', 'Please either type a color word or type a hex code (starting with a #) to set the text color.', 'logoTextColor'),
 
-  new List('list', 'Please select a shape for the logo.', 'logoShape', ['Triangle', 'Square', 'Rectangle']),
+
 
   new Question('input', 'Please either type a color word or type a hex code (starting with a #) to set the shape color.', 'logoShapeColor'),
 ]
-
-function test() { console.log(questionsArr) }
-test()
 
 

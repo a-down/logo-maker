@@ -9,21 +9,44 @@ const questions = require('./util/questions');
 
 
 
+function init() {
+  inquirer
+    .prompt(questions.readyYet)
+    .then((response) => {
+      // console.log(response.appStart)
+      response.status === true ? start() : 
+      (console.log('Let us know when you are ready!'),
+      init())
+    })
+}
+init();
 
 
 
+// function init() {
+//   inquirer
+//     .prompt(questions.readyYet)
+//     .then((response) => {
+//       // response.status === true ? askPrompts() : 
+//       //   (console.log('Let us know when you are ready'),
+//       //   init())
+//       console.log(response)
+//     })
+//   }
 
-/* 
-Prompts
-- start on command
-- enter up to 3 characters
-- ask for text color (color keyword or hex)
-- choose from list of shapes
-  - circle
-  - triangle
-  - square
-- ask for shape color
-*/
+// init()
+
+
+// Prompts
+// - start on command
+// - enter up to 3 characters
+// - ask for text color (color keyword or hex)
+// - choose from list of shapes
+//   - circle
+//   - triangle
+//   - square
+// - ask for shape color
+
 
 // constructor uses the prompts responses to build object
   // shapes constructor
