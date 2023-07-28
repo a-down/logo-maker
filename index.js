@@ -23,6 +23,7 @@ function start() {
         console.log('Please use 3 or fewer letters.')
         start()
       } else {
+        // if all requirements are met, renderLogo()
         renderLogo(responses)
       }
     })
