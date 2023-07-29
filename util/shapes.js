@@ -35,7 +35,7 @@ class Circle extends Shape {
   constructor(text, textColor, shapeColor) {
     super(text, textColor, shapeColor);
     this.scriptTag = 'circle';
-    this.positioning = 'cx="148" cy="120" r="80"'
+    this.positioning = 'cx="150" cy="100" r="80" fill="green"'
   }
 
   renderText() {
