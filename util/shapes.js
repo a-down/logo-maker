@@ -13,10 +13,6 @@ class Shape {
   render() {
     return `<${this.scriptTag} ${this.positioning} fill="${this.shapeColor}" />`
   }
-
-  renderText() {
-    return `<text x="98" y="135" fill="${this.textColor}" font-size="44">${this.text}</text>`
-  }
 }
 
 
@@ -26,6 +22,10 @@ class Triangle extends Shape {
     super(text, textColor, shapeColor);
     this.scriptTag = 'polygon';
     this.positioning = 'points="150, 18 244, 182 56, 182"'
+  }
+
+  renderText() {
+    return `<text x="150" y="140" font-size="40" text-anchor="middle" fill="${this.textColor}">${this.text}}</text>`
   }
 }
 
@@ -37,6 +37,10 @@ class Circle extends Shape {
     this.scriptTag = 'circle';
     this.positioning = 'cx="148" cy="120" r="80"'
   }
+
+  renderText() {
+    return `<text x="150" y="125" font-size="55" text-anchor="middle" fill="${this.textColor}">${this.text}</text>`
+  }
 }
 
 
@@ -46,6 +50,10 @@ class Square extends Shape {
     super(text, textColor, shapeColor);
     this.scriptTag = 'rect';
     this.positioning = 'x="65" y="40" width="165" height="165"'
+  }
+
+  renderText() {
+    return `<text x="150" y="140" font-size="55" text-anchor="middle" fill="${this.textColor}}">${this.text}</text>`
   }
 }
 
@@ -82,9 +90,9 @@ function renderScript(responses) {
 
 // combines the rendered script with the <svg> script and returns it to the renderScript() function
 function renderFullScript(shapeScript, textScript) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="300px" height="200px">
-${shapeScript}
-${textScript}
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="300px" height="200px">\n
+  ${shapeScript}\n
+  ${textScript}\n
 </svg>`
 }
 
