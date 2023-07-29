@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="200px">
-<polygon points="150, 18 244, 182 56, 182" fill="Navy" />
-<text x="98" y="135" fill="Lime" font-size="44">MIN</text>
+
+  <rect x="65" y="40" width="165" height="165" fill="#0A2E68" />
+
+  <text x="150" y="140" font-size="55" text-anchor="middle" fill="#92E1C0">AD</text>
+
 </svg>

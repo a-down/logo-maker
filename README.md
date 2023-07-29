@@ -48,7 +48,7 @@ To use the Logo Maker, you will need to follow these instructions:
 
 ## Visual Example of Generated README
 
-![Visual of Rendered Logo](./util/logo-examples/example-3.svg)
+![Visual of Rendered Logo](./util/logo-examples/example-1.svg)
 
 
 
