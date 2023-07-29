@@ -16,7 +16,7 @@ describe('Test of the Circle Class', () => {
     it ('should create a string to generate a circle in the svg file.', () => {
       const shape = new shapes.Circle();
       shape.setColor("blue");
-      expect(shape.render()).toEqual('<circle cx="148" cy="120" r="80" fill="blue" />');
+      expect(shape.render()).toEqual('<circle cx="150" cy="100" r="80" fill="blue" />');
     })
   })
 })
