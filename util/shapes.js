@@ -25,7 +25,7 @@ class Triangle extends Shape {
   }
 
   renderText() {
-    return `<text x="150" y="140" font-size="40" text-anchor="middle" fill="${this.textColor}">${this.text}}</text>`
+    return `<text x="150" y="140" font-size="40" text-anchor="middle" fill="${this.textColor}">${this.text}</text>`
   }
 }
 
@@ -35,7 +35,7 @@ class Circle extends Shape {
   constructor(text, textColor, shapeColor) {
     super(text, textColor, shapeColor);
     this.scriptTag = 'circle';
-    this.positioning = 'cx="150" cy="100" r="80" fill="green"'
+    this.positioning = 'cx="150" cy="100" r="80"'
   }
 
   renderText() {
@@ -53,7 +53,7 @@ class Square extends Shape {
   }
 
   renderText() {
-    return `<text x="150" y="140" font-size="55" text-anchor="middle" fill="${this.textColor}}">${this.text}</text>`
+    return `<text x="150" y="140" font-size="55" text-anchor="middle" fill="${this.textColor}">${this.text}</text>`
   }
 }
 
